@@ -38,57 +38,106 @@
                  <!--end:Menu link-->
                 
              </div>
-             <!--end:Menu item-->
-             <!--begin:Menu item-->
+           
              <div class="menu-item pt-5">
-                 <!--begin:Menu content-->
+                 
                  FAQs-->
-                 <!--end:Menu content-->
+                ->
              </div>
-             <!--end:Menu item-->
-             <!--begin:Menu item-->
+            
              <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                  <!--begin:Menu <link--><a href="{{route('question')}}"></link--><span class="menu-link"><span class="menu-icon"><i
                              class="ki-duotone ki-gift fs-2"><span class="path1"></span><span
                                  class="path2"></span><span class="path3"></span><span
                                  class="path4"></span></i></span><span
                          class="menu-title">FAQS</span></span></a>
-                 <!--end:Menu link-->
+               
                 
              </div>
-             
+             <div class="menu-item pt-5">
+               
+               CMS-->
+                
+            </div>
              <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                  <!--begin:Menu link--><span class="menu-link"><span class="menu-icon"><i
                              class="ki-duotone ki-setting-2 fs-2"><span class="path1"></span><span
                                  class="path2"></span></i></span><span
-                         class="menu-title">Layouts</span><span class="menu-arrow"></span></span>
-                 <!--end:Menu link-->
-                 <!--begin:Menu sub-->
+                         class="menu-title">Cms</span><span class="menu-arrow"></span></span>
+                
                  <div class="menu-sub menu-sub-accordion">
-                     <!--begin:Menu item-->
+                  
                      <div class="menu-item">
                          <!--begin:Menu link--><a class="menu-link"
-                             href="layouts/extended-aside.html"><span class="menu-bullet"><span
+                             href="{{route('banner')}}"><span class="menu-bullet"><span
                                      class="bullet bullet-dot"></span></span><span
-                                 class="menu-title">Extended Aside</span></a>
-                         <!--end:Menu link-->
+                                 class="menu-title">Hero Banner</span></a>
+                         
                      </div>
-                     <!--end:Menu item-->
-                     <!--begin:Menu item-->
+                    
                      <div class="menu-item">
-                         <!--begin:Menu link--><a class="menu-link"
-                             href="layouts/compact-aside.html"><span class="menu-bullet"><span
+                         <a class="menu-link"
+                             href="{{route('home.about')}}"><span class="menu-bullet"><span
                                      class="bullet bullet-dot"></span></span><span
-                                 class="menu-title">Compact Aside</span></a>
-                         <!--end:Menu link-->
+                                 class="menu-title">Home About</span></a>
+                        
                      </div>
                      <!--end:Menu item-->
+
+                     <div class="menu-item">
+                        <!--begin:Menu link--><a class="menu-link"
+                            href="{{route('home.delership')}}"><span class="menu-bullet"><span
+                                    class="bullet bullet-dot"></span></span><span
+                                class="menu-title">Home Delership</span></a>
+                        <!--end:Menu link-->
+                    </div>
+
+
+                    <div class="menu-item">
+                        <!--begin:Menu link--><a class="menu-link"
+                            href="{{route('aboutus')}}"><span class="menu-bullet"><span
+                                    class="bullet bullet-dot"></span></span><span
+                                class="menu-title">About Us</span></a>
+                        <!--end:Menu link-->
+                    </div>
+
+
+                    <div class="menu-item">
+                        <!--begin:Menu link--><a class="menu-link"
+                            href="{{route('howitwork')}}"><span class="menu-bullet"><span
+                                    class="bullet bullet-dot"></span></span><span
+                                class="menu-title">How It Work</span></a>
+                        <!--end:Menu link-->
+                    </div>
                     
                  </div>
                  <!--end:Menu sub-->
              </div>
+
+             <div class="menu-item pt-5">
+                <!--begin:Menu content-->
+                SETTINGS-->
+                <!--end:Menu content-->
+            </div>
              <!--end:Menu item-->
-          
+             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                <!--begin:Menu link--><span class="menu-link"><span class="menu-icon"><i
+                            class="ki-duotone ki-setting-2 fs-2"><span class="path1"></span><span
+                                class="path2"></span></i></span><span
+                        class="menu-title">Settings</span><span class="menu-arrow"></span></span>
+              
+                <div class="menu-sub menu-sub-accordion">
+                  
+                    <div class="menu-item">
+                        <a class="menu-link"
+                            href="#"><span class="menu-bullet"><span
+                                    class="bullet bullet-dot"></span></span><span
+                                class="menu-title">Mail</span></a>
+                       
+                    </div>
+
+                </div>
+             </div>
          </div>
      </div>
      <!--end::Menu-->

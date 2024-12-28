@@ -1,4 +1,4 @@
-<div class="modal fade" id="kt_modal_new_target" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="kt_modal_new_targets" tabindex="-1" aria-hidden="true">
     <!--begin::Modal dialog-->
     <div class="modal-dialog modal-dialog-centered mw-650px">
         <!--begin::Modal content-->
@@ -21,7 +21,7 @@
                         <div class="col-md-12 fv-row">
                             <label class="required fs-6 fw-semibold mb-2">Type</label>
     
-                            <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Select Question Type" name="target_assign" name="vehicle_issue" id="vehicle_issue">
+                            <select class="form-select form-select-solid" required data-control="select2" data-hide-search="true" data-placeholder="Select Question Type" name="target_assign" name="vehicle_issue" id="vehicle_issue">
                                 <option value="" selected disabled>Select Question Type</option>
                             <option value="Engine Issue">Engine Issue</option>
                             <option value="Transmission Problem">Transmission Problem</option>
@@ -43,7 +43,7 @@
                     <div class="d-flex flex-column mb-8">
                         <label class="fs-6 fw-semibold mb-2">Question</label>
     
-                        <textarea class="form-control form-control-solid" rows="3" name="question" id="question" placeholder="Type Target Questions....">
+                        <textarea class="form-control form-control-solid" required rows="3" name="question" id="question" placeholder="Type Target Questions...." >
                         </textarea>
                     </div>
                     <!--end::Input group-->

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\Backend\AdminController;
 use App\Http\Controllers\Web\Backend\FaqController;
+use App\Http\Controllers\Web\Forntend\CmsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -37,4 +38,26 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+//ForntEnd route//CMS
+//about us 
+Route::get('/about-us',[CmsController::class,'aboutUs'])->name('aboutus');
+Route::post('/create/about-us',[CmsController::class,'storeAboutus'])->name('about-us');
+
+//how it work
+Route::get('/howitwork',[CmsController::class,'howtowork'])->name('howitwork');
+Route::post('/create/howit-work',[CmsController::class,'storeHowitwork'])->name('create.howitwork');
+
+//banner
+Route::get('/banner',[CmsController::class,'index'])->name('banner');
+Route::post('/banner/create',[CmsController::class, 'createBanner'])->name('banner.create');
+//Route::edit('/banner/{$id}',[CmsController::class, 'editBanner'])->name('banner.edit');
+//Route::put('/banner-update/{$id}',[CmsController::class, 'herobannerUpdate'])->name('banner.update');
+//Home About
+Route::get('/home/about',[CmsController::class,'homeAbout'])->name('home.about');
+Route::post('/home/about/store',[CmsController::class,'homeAboutStore'])->name('home.store');
+
+//home delership
+Route::get('/home/delership',[CmsController::class,'delership'])->name('home.delership');
+Route::post('/home/delership/create',[CmsController::class, 'storeDelership'])->name('delership.store');
 require __DIR__.'/auth.php';

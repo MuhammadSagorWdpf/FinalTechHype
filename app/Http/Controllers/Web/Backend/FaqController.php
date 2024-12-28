@@ -17,7 +17,7 @@ class FaqController extends Controller
     }
     public function createFqa()
     {
-        return view('backend.admin.layouts.FaQ.createfqa');
+        return view('backend.admin.partials.modals');
     }
 
     //Insert FaQ in Database
@@ -33,21 +33,9 @@ class FaqController extends Controller
         $question->vehicle_issue = $request->target_assign;
         $question->question = $request->question;
         $question->save();
+        flash()->success('Question Added Successfully!');
         return redirect()->back();
     }
-
-    //Faq fetching
-
-    /*  public function showfaq()
-    {
-        dd(request()->all());
-       // dd(request()->ajax());
-        if(request()->ajax())
-        {
-            return DataTables::eloquent(Question::query())->make(true);
-        }
-        return view('backend.admin.layouts.FaQ.faq');
-    } */
 
 
     public function showfaq(Request $request)
@@ -59,9 +47,10 @@ class FaqController extends Controller
                 ->addIndexColumn()
                 ->addColumn('action', function ($row) {
                     // Buttons with inline class
-                    $deleteBtn = '<a href="#" data-id="' . $row->id . '" class="delete "><i class="fa fa-trash" style="font-size:30px"></i> </a>';
-                    $editBtn = '<a href="#" onclick="edit(' . $row->id . ')" class="edit" ><i class="fa fa-pencil" style="font-size:30px"></i></a>';
-                    return $deleteBtn . ' ' . $editBtn;
+                    $editBtn = '<a href="#" onclick="edit(' . $row->id . ')" class="edit " style="margin-left:30px;" ><i class="fa fa-pencil" style="font-size:20px"></i></a>';
+                    $deleteBtn = '<a href="#" data-id="' . $row->id . '" class="delete" style="margin-left:10px;"  ><i class="fa fa-trash" style="font-size:20px"></i> </a>';
+                    $buttons = '<div class="m-5 " style="margin-left:5px;">' . $editBtn  . ' ' . $deleteBtn . '</div>';
+                    return $buttons;
                 })
                 ->rawColumns(['action'])
                 ->make(true);

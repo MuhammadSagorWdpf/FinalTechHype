@@ -3,40 +3,51 @@
 @section('contents')
 <div class="container mt-6">
     <div style="display: flex; justify-content:end;">
-        <a href="{{ route('faq.create') }}" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">
+        <a href="{{ route('faq.create') }}" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_targets">
             Add FQA
         </a>
     </div>
-</div>
 
-<div class="card m-5">
+
+ <div class="card m-10">
     <!--begin::Card header-->
     <div class="card-header">
         <div class="card-title">
-            <h3>License Usage</h3>
+            <h3>Faq list</h3>
         </div>
     </div>
 
-    <!--begin::Card body-->
-    <div class="card-body p-5 col-md-9">
+  
+
+    <div id="kt_referrals_1" class="card-body p-0 tab-pane fade show active" role="tabpanel">
         <div class="table-responsive">
-            <table class="table align-middle table-row-bordered table-row-solid gy-4 data-table" id="kt_security_license_usage_table">
-                <thead class="border-gray-200 fs-5 fw-semibold bg-lighten">
+            <!--begin::Table-->
+            <table class="table align-middle table-row-bordered table-row-solid gy-4 gs-9 data-table">
+                <!--begin::Thead-->
+                <thead class="border-gray-200 fs-5 fw-semibold bg-lighten m-3">
                     <tr>
-                        <th class="w-150px ps-9">ID</th>
-                        <th class="px-0 min-w-250px">Type</th>
-                        <th class="min-w-150px">Question</th>
-                        <th class="min-w-150px">Status</th>
-                        <th class="min-w-50px">Action</th>
+                        <th class="min-w-175px ps-9">Id</th>
+                        <th class="min-w-150px px-0">Type</th>
+                        <th class="min-w-350px">question</th>
+                        <th class="min-w-125px">status</th>
+                        <th class="min-w-125px text-center">Action</th>
                     </tr>
                 </thead>
-                <tbody class="fw-6 fw-semibold text-gray-600">
-                    <!-- Data rows will be filled here dynamically -->
+                <!--end::Thead-->
+
+                <!--begin::Tbody-->
+                <tbody class="fs-6 fw-semibold text-gray-600">
+                                         
+                     
                 </tbody>
+                <!--end::Tbody-->                                       
             </table>
+            <!--end::Table-->
         </div>
     </div>
-</div>
+    
+  </div>
+
 
 <!-- Modal for Edit -->
 <div class="modal fade" id="kt_modal_new_target" tabindex="-1" aria-hidden="true">
@@ -72,7 +83,7 @@
 
                     <div class="row g-9 mb-8">
                         <div class="col-md-12 fv-row">
-                            <label class="required fs-6 fw-semibold mb-2">Type</label>
+                            <label class="required fs-6 fw-semibold mb-2">Status</label>
                             <select class="form-select form-select-solid" name="status" id="status">
                                 <option value="">Select status</option>
                                 <option value="active">Active</option>
@@ -116,6 +127,10 @@
             ]
         });
     });
+
+
+
+
 
     // Edit modal data
     function edit(id) {
@@ -176,6 +191,7 @@
             },
             error: function(xhr, status, error) {
                 toastr.error("There was an error updating the question.");
+                
             }
         });
     });
