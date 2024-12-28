@@ -12,6 +12,7 @@
         
          <img alt="Logo" src="{{asset('admin/assets/media/logos/logo-default-dark.svg')}}"
              class="max-h-50px logo-default theme-dark-show" />
+             <img alt="Logo" src="{{asset('admin/assets/media/logos/logo-default.svg')}}" class="max-h-50px logo-default theme-light-show"/>
        
      </a>
      <!--end::Logo-->
@@ -67,6 +68,15 @@
                 
                  <div class="menu-sub menu-sub-accordion">
                   
+                     <div class="menu-item">
+                         <!--begin:Menu link--><a class="menu-link"
+                             href="{{route('create.homepage')}}"><span class="menu-bullet"><span
+                                     class="bullet bullet-dot"></span></span><span
+                                 class="menu-title">Home Page</span></a>
+                         
+                     </div>
+
+                     
                      <div class="menu-item">
                          <!--begin:Menu link--><a class="menu-link"
                              href="{{route('banner')}}"><span class="menu-bullet"><span
@@ -132,7 +142,7 @@
                         <a class="menu-link"
                             href="#"><span class="menu-bullet"><span
                                     class="bullet bullet-dot"></span></span><span
-                                class="menu-title">Mail</span></a>
+                                class="menu-title">cms</span></a>
                        
                     </div>
 

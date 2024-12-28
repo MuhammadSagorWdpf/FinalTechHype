@@ -11,6 +11,12 @@ use DataTables;
 
 class CmsController extends Controller
 {
+
+
+    public function homepage()
+    {
+        return view('backend.admin.layouts.cms.homepage');
+    }
     //Hero banner
 
     public function index(Request $request)

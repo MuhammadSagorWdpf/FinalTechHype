@@ -11,7 +11,7 @@
         <!--end::Aside Toggle-->
 
         <!--begin::Logo-->
-        <a href="index-2.html" class="d-lg-none">
+        <a href="{{route('dashboard')}}" class="d-lg-none">
             <img alt="Logo" src="{{asset('admin/assets/media/logos/logo-compact.svg')}}" class="mh-40px" />
         </a>
         <!--end::Logo-->

@@ -39,6 +39,8 @@ Route::middleware('auth')->group(function () {
 });
 
 
+
+Route::get('/homepage-create',[CmsController::class, 'homepage'])->name('create.homepage');
 //ForntEnd route//CMS
 //about us 
 Route::get('/about-us',[CmsController::class,'aboutUs'])->name('aboutus');
