@@ -14,12 +14,17 @@ class CmsController extends Controller
 
 
     public function homepage()
+
     {
-        return view('backend.admin.layouts.cms.homepage');
+        $cms=Cms::where('section',['banner_Section'])->first();
+        $home_abouts=Cms::where('section',['home_about'])->first();
+        $home_delership=Cms::where('section',['delership_section'])->first();
+        $home_works=Cms::where('section',['howit_work'])->first();
+        return view('backend.admin.layouts.cms.homepage' ,compact('cms','home_abouts','home_delership','home_works'));
     }
     //Hero banner
 
-    public function index(Request $request)
+   /*  public function index(Request $request)
     {
         if ($request->ajax()) {
             // Get the data from the Cms model
@@ -56,7 +61,7 @@ class CmsController extends Controller
     }
 
 
-    //hero banner store
+    //hero banner store */
 
     public function createBanner(CmsValidationRequest $request)
     {
@@ -87,7 +92,7 @@ class CmsController extends Controller
                 $banner->title = $request->title;
                 $banner->section = 'banner_section';
                 $banner->description = $request->description;
-                $banner->button = $request->button;
+               // $banner->button = $request->button;
                 $banner->image = $imagePath ?? null;
                 $banner->save();
                 $message = 'Banner Created Successfully!';
@@ -102,12 +107,12 @@ class CmsController extends Controller
             ]);
         }
 
-        return view('backend.admin.layouts.cms.heerobanner');
+        return view('backend.admin.layouts.cms.homepage');
     }
 
 
     //Home About Section
-    public function homeAbout(Request $request)
+   /*  public function homeAbout(Request $request)
     {
 
         if ($request->ajax()) {
@@ -143,7 +148,7 @@ class CmsController extends Controller
 
         return view('backend.admin.layouts.cms.home_about');
     }
-
+ */
 
     //homeabout create
     public function homeAboutStore(CmsValidationRequest $request)
@@ -172,7 +177,7 @@ class CmsController extends Controller
                 $existingCms->image = $imagePath ?? $existingCms->image;
                 $existingCms->save();
 
-                $message = 'Banner Updated Successfully';
+                $message = 'About Updated Successfully';
                 $data = $existingCms;
             } else {
                 // If the section doesn't exist, create a new record
@@ -184,7 +189,7 @@ class CmsController extends Controller
                 $newCms->image = $imagePath;
                 $newCms->save();
 
-                $message = 'Banner Created Successfully';
+                $message = 'About Created Successfully';
                 $data = $newCms;
             }
 
@@ -197,11 +202,11 @@ class CmsController extends Controller
         }
 
         // If not an AJAX request, you can redirect or return a view
-        return view('backend.admin.layouts.cms.home_about');
+        return view('backend.admin.layouts.cms.homepage');
     }
 
     /// HOME Delership section
-    public function delership(Request $request)
+  /*   public function delership(Request $request)
     {
 
         if ($request->ajax()) {
@@ -239,7 +244,7 @@ class CmsController extends Controller
 
         return view('backend.admin.layouts.cms.delership');
     }
-
+ */
     public function storeDelership(CmsValidationRequest $request)
     {
         // Check if this is an AJAX request
@@ -399,7 +404,7 @@ class CmsController extends Controller
 
     //how to work
 
-    public function howtowork(Request $request)
+  /*   public function howtowork(Request $request)
     {
 
         if ($request->ajax()) {
@@ -430,7 +435,7 @@ class CmsController extends Controller
                 ->make(true);
         }
         return view('backend.admin.layouts.cms.how_it_work');
-    }
+    } */
 
 
     public function storeHowitwork(CmsValidationRequest $request)

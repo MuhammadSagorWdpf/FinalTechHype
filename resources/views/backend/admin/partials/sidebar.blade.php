@@ -76,31 +76,31 @@
                          
                      </div>
 
-                     
+                    {{--  
                      <div class="menu-item">
                          <!--begin:Menu link--><a class="menu-link"
                              href="{{route('banner')}}"><span class="menu-bullet"><span
                                      class="bullet bullet-dot"></span></span><span
                                  class="menu-title">Hero Banner</span></a>
                          
-                     </div>
-                    
+                     </div> --}}
+                  {{--   
                      <div class="menu-item">
                          <a class="menu-link"
                              href="{{route('home.about')}}"><span class="menu-bullet"><span
                                      class="bullet bullet-dot"></span></span><span
                                  class="menu-title">Home About</span></a>
                         
-                     </div>
+                     </div> --}}
                      <!--end:Menu item-->
-
+{{-- 
                      <div class="menu-item">
                         <!--begin:Menu link--><a class="menu-link"
                             href="{{route('home.delership')}}"><span class="menu-bullet"><span
                                     class="bullet bullet-dot"></span></span><span
                                 class="menu-title">Home Delership</span></a>
                         <!--end:Menu link-->
-                    </div>
+                    </div> --}}
 
 
                     <div class="menu-item">
@@ -112,13 +112,13 @@
                     </div>
 
 
-                    <div class="menu-item">
+                   {{--  <div class="menu-item">
                         <!--begin:Menu link--><a class="menu-link"
                             href="{{route('howitwork')}}"><span class="menu-bullet"><span
                                     class="bullet bullet-dot"></span></span><span
                                 class="menu-title">How It Work</span></a>
                         <!--end:Menu link-->
-                    </div>
+                    </div> --}}
                     
                  </div>
                  <!--end:Menu sub-->
