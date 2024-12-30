@@ -111,56 +111,17 @@ class CmsController extends Controller
     }
 
 
-    //Home About Section
-   /*  public function homeAbout(Request $request)
-    {
-
-        if ($request->ajax()) {
-            // Get the data from the Cms model
-            $data = Cms::where('section', 'home_about')->orderBy('created_at', 'desc')->get();
-
-            // Return DataTables response
-            return DataTables::of($data)
-                ->addIndexColumn()
-
-                // Action buttons column with custom buttons (Edit, Delete)
-                ->addColumn('action', function ($row) {
-
-                    $deleteBtn = '<a href="#" data-id="' . $row->id . '" class="delete" style="margin-left:10px;">
-                                    <i class="fa fa-trash" style="font-size:20px"></i>
-                                 </a>';
-                    $buttons = '<div class="m-5" style="margin-left:5px;">' . $deleteBtn . '</div>';
-                    return $buttons;
-                })
-
-                ->addColumn('image', function ($row) {
-
-                    return $row->image ? '<img src="' . asset($row->image) . '" alt="Image" style="width: 50px; height: 50px; object-fit: cover;">' : 'No Image';
-                })
-
-                ->rawColumns(['action', 'image'])
-
-                // Return the DataTables response
-                ->make(true);
-        }
-
-        // Return the view with DataTable
-
-        return view('backend.admin.layouts.cms.home_about');
-    }
- */
-
-    //homeabout create
+   
     public function homeAboutStore(CmsValidationRequest $request)
     {
 
         // dd($request->all());
 
         if ($request->ajax()) {
-            // Check if the section already exists
+            
             $existingCms = Cms::where('section', 'home_about')->first();
 
-            // Handle file upload for the image (if provided)
+            
             $imagePath = null;
             if ($request->hasFile('image')) {
                 $image = $request->file('image');
@@ -403,39 +364,6 @@ class CmsController extends Controller
 
 
     //how to work
-
-  /*   public function howtowork(Request $request)
-    {
-
-        if ($request->ajax()) {
-            // Get the data from the Cms model
-            $data = Cms::where('section', 'howit_work')->orderBy('created_at', 'desc')->get();
-
-            // Return DataTables response
-            return DataTables::of($data)
-                ->addIndexColumn()
-
-                // Action buttons column with custom buttons (Edit, Delete)
-                ->addColumn('action', function ($row) {
-
-                    $deleteBtn = '<a href="#" data-id="' . $row->id . '" class="delete" style="margin-left:10px;">
-                                <i class="fa fa-trash" style="font-size:20px"></i>
-                             </a>';
-                    $buttons = '<div class="m-5" style="margin-left:5px;">' . $deleteBtn . '</div>';
-                    return $buttons;
-                })
-
-                ->addColumn('image', function ($row) {
-
-                    return $row->image ? '<img src="' . asset($row->image) . '" alt="Image" style="width: 50px; height: 50px; object-fit: cover;">' : 'No Image';
-                })
-
-                ->rawColumns(['action', 'image'])
-
-                ->make(true);
-        }
-        return view('backend.admin.layouts.cms.how_it_work');
-    } */
 
 
     public function storeHowitwork(CmsValidationRequest $request)

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\Backend\AdminController;
 use App\Http\Controllers\Web\Backend\FaqController;
 use App\Http\Controllers\Web\Forntend\CmsController;
+use App\Http\Controllers\Web\Forntend\SettingsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -62,4 +63,11 @@ Route::post('/home/about/store',[CmsController::class,'homeAboutStore'])->name('
 //home delership
 Route::get('/home/delership',[CmsController::class,'delership'])->name('home.delership');
 Route::post('/home/delership/create',[CmsController::class, 'storeDelership'])->name('delership.store');
+
+//Settings
+Route::get('/system-settings',[SettingsController::class,'system'])->name('system.settings');
+//mailsetting
+Route::get('/mail-setting',[SettingsController::class,'mailsettings'])->name('mail.settings');
+//socialmedia
+Route::get('/social-media',[SettingsController::class,'socialmedias'])->name('socialmedia.settings');
 require __DIR__.'/auth.php';

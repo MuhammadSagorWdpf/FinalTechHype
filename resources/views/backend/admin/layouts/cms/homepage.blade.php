@@ -710,11 +710,9 @@
                 
             }
         },
-		error: function(response) {
-    toastr.error('Something went wrong. Please try again.', 'Error', {
-        timeOut: 5000 // Show for 5 seconds
-    });
-}
+        error: function(response) {
+            alert('Error: Something went wrong');
+        }
     });
 });
 
@@ -763,8 +761,8 @@ $('#kt_ecommerce_settings_general_forms').submit(function(e) {
             }
         },
 		error: function(response) {
-    toastr.error('Something went wrong. Please try again.', 'Error', {
-        timeOut: 5000 
+            alert('Error: Something went wrong');
+        }
     });
 });
 
@@ -817,8 +815,8 @@ $('#kt_ecommerce_settings_general_form_deler').submit(function(e) {
             }
         },
 		error: function(response) {
-    toastr.error('Something went wrong. Please try again.', 'Error', {
-        timeOut: 5000 
+            alert('Error: Something went wrong');
+        }
     });
 });
 
@@ -868,9 +866,9 @@ $('#kt_ecommerce_settings_general_form_works').submit(function(e) {
                 }
             }
         },
-		error: function(response) {
-    toastr.error('Something went wrong. Please try again.', 'Error', {
-        timeOut: 5000 
+        error: function(response) {
+            alert('Error: Something went wrong');
+        }
     });
 });
 
